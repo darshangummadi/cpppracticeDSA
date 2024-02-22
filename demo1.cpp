@@ -11,8 +11,18 @@ int main() {
 
     //vectors
     /* Array size cannot be incresed once it is declared*/
-    vector<int> v;
+    vector<pair<int, int>> vec;
+    /*push_back usually - needs to use curly braces around to push such data
+    but in the case of emplace_back it automatically assumes it to be a pair
+    and pushes it*/
+    vec.push_back({1,2});
+    vec.emplace_back(1,2);
+    cout <<  vec[0]<<" "<< vec[1];
+    /* one of the way to access the vector is by index numeber like array
+    and the other way is by iterator.*/
 
+    vector<int>::iterator it = v.begin();
+    
 
     return 0;
 } 
