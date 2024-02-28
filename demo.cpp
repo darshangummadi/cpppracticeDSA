@@ -230,10 +230,19 @@ void print17(int n){
 }
 }
 
+void print18(int n){
+  int revNum = 0;
+  while(n>0){
+    int ld = n % 10;
+    revNum = (revNum * 10) + ld;
+    n = n / 10;
+  }
+  cout  << revNum;
+}
 int main(){
   int n;
   cin >> n;
-  print17(n);
+  print18(n);
   
  return 0;
 }

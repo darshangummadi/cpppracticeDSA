@@ -21,8 +21,24 @@ int main() {
     /* one of the way to access the vector is by index numeber like array
     and the other way is by iterator.*/
 
-    vector<int>::iterator it = v.begin();
-    
+
+
+    Map<int,int> mpp;
+    mpp[1] = 2;
+    mpp[3] = 4;
+    mpp[2] = 3;
+
+    // map stores unique keys in sorted order something similar to SET Data structure
+    //
+    for (auto it : mpp){
+        cout  << it.first << " " <<it.second << endl;
+
+    }
+    //multimap 
+    // duplicate keys with sorted order
+
+    //unordered map
+    //which have 
 
     return 0;
 } 
