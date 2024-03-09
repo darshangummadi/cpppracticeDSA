@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 #include <iostream>
+#include <map>
 using namespace  std;
 int cnt = 0;
 void print(){
@@ -50,9 +51,47 @@ int main(){
         cout << hash[number] << endl;
 
     }
+    
+    string s;
+    cin  >> s;
+
+    //precompute
+    int hash[256] = {0};
+    for  (int i = 0; i < s.size(); i++){
+        //cout << s.size() << endl;
+        hash[s[i]]++;
+    }
+
+
+    int q;
+    cin  >> q;
+    while(q--){
+        char c;
+        cin  >> c;
+        cout << hash[c] << endl;
+    }
     */
 
-   int x = 'a';
-   cout << x;
+   int n;
+   cin >> n;
+   int arr[n];
+   for  (int i=0; i<n; i++) {
+       cin >> arr[i];
+   }
+   // pre compute
+    map<int, int> mpp;
+   for (int  i=0;i<n; i++){
+    mpp[arr[i]]++;
+   }
+
+    int q;
+    cin >> q;
+    while (q--){
+        int num;
+        cin  >> num;
+        
+        cout << mpp[num] <<endl;
+    }
+
     return 0;
 }
